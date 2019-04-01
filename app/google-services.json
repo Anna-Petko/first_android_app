@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "297100972326",
+    "firebase_url": "https://tds-app-86e6e.firebaseio.com",
+    "project_id": "tds-app-86e6e",
+    "storage_bucket": "tds-app-86e6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297100972326:android:d560cc018534d77f",
+        "android_client_info": {
+          "package_name": "com.example.tdsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297100972326-3jet2reerpau5fl6miehrurg6jlbia11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tdsapp",
+            "certificate_hash": "39d3d56b8d130075e2d39843095dc27eb0c30d2b"
+          }
+        },
+        {
+          "client_id": "297100972326-9od2piqd9blpq7tdtnhhoi0172f1q2r4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_5kxy6zggnQTr-ONdfEu_NKWgORrEvLs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297100972326-9od2piqd9blpq7tdtnhhoi0172f1q2r4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
