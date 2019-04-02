@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -87,6 +88,11 @@ public class RegistrationActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             mDialog.dismiss();
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                            Toast.makeText(getApplicationContext(), "Registration complete", Toast.LENGTH_SHORT).show();
+
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Problem", Toast.LENGTH_SHORT).show();
 
                         }
 

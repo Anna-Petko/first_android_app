@@ -2,6 +2,7 @@ package com.example.tdsapp;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,8 +10,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -66,6 +71,24 @@ public class MainActivity extends AppCompatActivity
                     password.setError("This field is required.");
                     return;
                 }
+                mDialog.setMessage("Processing ...");
+                mDialog.show();
+
+                mAuth.signInWithEmailAndPassword(mEmail, mPass).
+                        addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            mDialog.dismiss();
+                            startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                            Toast.makeText(getApplicationContext(), "Login complete", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Problema", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                    }
+                });
 
             }
         });
